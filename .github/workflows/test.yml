@@ -1,0 +1,24 @@
+name: Run Azure Login with OIDC
+on: workflow_dispatch
+
+permissions:
+  id-token: write
+  contents: read
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Az CLI login'
+        uses: azure/login@v1
+        with:
+          client-id: 44447795-4c24-4a4d-b5d1-0166b0731594
+          tenant-id: d38b2db8-335d-45d6-830d-670d6f8ab263
+          allow-no-subscriptions: true
+
+      - name: 'Run az commands'
+        run: |
+          while :
+          do
+            az group list
+          	sleep 60
+          done
