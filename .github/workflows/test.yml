@@ -19,6 +19,6 @@ jobs:
         run: |
           while :
           do
-            az group list
+            az account show
           	sleep 60
           done
