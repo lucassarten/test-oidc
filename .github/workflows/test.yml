@@ -19,6 +19,6 @@ jobs:
         run: |
           while :
           do
-            az account show
+            az account get-access-token
           	sleep 60
           done
