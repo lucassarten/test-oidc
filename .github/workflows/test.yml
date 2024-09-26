@@ -19,6 +19,6 @@ jobs:
         run: |
           while :
           do
-            az account get-access-token --scope https://storage.azure.com/.default
+            az account get-access-token
           	sleep 60
           done
