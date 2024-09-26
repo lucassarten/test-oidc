@@ -19,6 +19,6 @@ jobs:
         run: |
           while :
           do
-            az account get-access-token --scope https://graph.microsoft.com/.default
+            az account get-access-token --query "{expiresOn:expiresOn}"
           	sleep 60
           done
